@@ -1,4 +1,4 @@
-import javax.xml.transform.Source;
+package br.com.dionathandev.screenmatch.models;
 
 public class Movie {
 
