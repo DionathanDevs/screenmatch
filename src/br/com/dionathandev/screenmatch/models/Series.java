@@ -4,8 +4,8 @@ public class Series extends Media {
     private int episodes;
     private int seasons;
 
-    public Series(String name, int year, boolean sessionPlus, double review, int episodes, int seasons) {
-        super(name, year, sessionPlus, review, episodes);
+    public Series(String name, int year, boolean sessionPlus, int episodes, int seasons) {
+        super(name, year, sessionPlus);
         this.episodes = episodes;
         this.seasons = seasons;
     }

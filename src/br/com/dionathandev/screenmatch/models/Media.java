@@ -9,11 +9,12 @@ public class Media {
     private int totalReviews;
 
 
-    public Media(String name, int year, boolean sessionPlus, double review) {
+    public Media(String name, int year, boolean sessionPlus) {
         this.name = name;
         this.year = year;
         this.sessionPlus = sessionPlus;
-        this.review = review;
+        this.review = 0;
+        this.totalReviews = 0;
 
     }
 
@@ -24,16 +25,24 @@ public class Media {
         System.out.println("Review: " + getReview());
         System.out.println("Total Reviews: " + getTotalReviews());
 
-        System.out.println("Média Filme: " + averageRating());
+        System.out.println("Média Filme: " + this.averageRating());
     }
 
     public void rating(double rating){
         review += rating;
-        totalReviews++;
+        totalReviews += 1;
     }
 
     double averageRating(){
-        return review/totalReviews;
+            if (totalReviews <= 0){
+                return 0;
+            } else{
+                return review/totalReviews;
+            }
+
+
+
+
     }
 
     public void setName(String name) {
