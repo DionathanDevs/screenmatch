@@ -1,6 +1,8 @@
 package br.com.dionathandev.screenmatch.models;
 
-public class Episode {
+import br.com.dionathandev.screenmatch.classificacao.Classificavel;
+
+public class Episode implements Classificavel {
     private int number;
     private String title;
     private String description;
@@ -11,6 +13,12 @@ public class Episode {
         this.title = title;
         this.description = description;
         this.series = series;
+    }
+
+
+    @Override
+    public int getClassificacao() {
+        return 1;
     }
 
     public String getDescription() {

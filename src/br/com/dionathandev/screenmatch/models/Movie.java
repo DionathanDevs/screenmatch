@@ -1,12 +1,19 @@
     package br.com.dionathandev.screenmatch.models;
 
-    public class Movie extends Media {
+    import br.com.dionathandev.screenmatch.classificacao.Classificavel;
+
+    public class Movie extends Media implements Classificavel {
 
         private int durationMinutes;
 
         public Movie(String name, int year, boolean sessionPlus, int durationMinutes) {
             super(name, year, sessionPlus);
             this.durationMinutes = durationMinutes;
+        }
+
+        @Override
+        public int getClassificacao() {
+            return (int) averageRating() / 2;
         }
 
         public void setDurationMinutes(int durationMinutes) {
