@@ -6,7 +6,12 @@ public class Episode {
     private String description;
     private Series series;
 
-
+    public Episode(int number, String title, String description, Series series) {
+        this.number = number;
+        this.title = title;
+        this.description = description;
+        this.series = series;
+    }
 
     public String getDescription() {
         return description;
