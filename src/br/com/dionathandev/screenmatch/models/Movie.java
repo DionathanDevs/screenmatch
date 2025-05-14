@@ -12,6 +12,11 @@
         }
 
         @Override
+        public String toString() {
+            return "Filme: " + this.getName() + "\nAno de Lançamento: " + this.getYear();
+        }
+
+        @Override
         public int getClassificacao() {
             return (int) averageRating() / 2;
         }

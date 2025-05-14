@@ -10,6 +10,8 @@ public class Series extends Media {
         this.seasons = seasons;
     }
 
+
+
     public int getEpisodes() {
         return episodes;
     }

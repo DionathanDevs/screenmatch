@@ -1,5 +1,6 @@
+package br.com.dionathandev.screenmatch.main;
+
 import br.com.dionathandev.screenmatch.classificacao.Recomendacao;
-import br.com.dionathandev.screenmatch.models.Media;
 import br.com.dionathandev.screenmatch.models.Movie;
 import br.com.dionathandev.screenmatch.models.Series;
 
@@ -26,5 +27,7 @@ public class Main {
 
         System.out.println("Tamanho da Lista: " +  MoviesList.size());
         System.out.println("Primeiro Filme: " + MoviesList.get(0).getName());
+        System.out.println(MoviesList);
+        System.out.println(MoviesList.get(0).toString());
     }
 }
