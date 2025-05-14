@@ -3,6 +3,8 @@ import br.com.dionathandev.screenmatch.models.Media;
 import br.com.dionathandev.screenmatch.models.Movie;
 import br.com.dionathandev.screenmatch.models.Series;
 
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -18,5 +20,11 @@ public class Main {
         Recomendacao r1 = new Recomendacao();
 
         r1.filter(m1);
+
+        ArrayList<Movie> MoviesList = new ArrayList<>();
+        MoviesList.add(m1);
+
+        System.out.println("Tamanho da Lista: " +  MoviesList.size());
+        System.out.println("Primeiro Filme: " + MoviesList.get(0).getName());
     }
 }
