@@ -1,3 +1,4 @@
+import br.com.dionathandev.screenmatch.classificacao.Recomendacao;
 import br.com.dionathandev.screenmatch.models.Media;
 import br.com.dionathandev.screenmatch.models.Movie;
 import br.com.dionathandev.screenmatch.models.Series;
@@ -13,6 +14,9 @@ public class Main {
         Series s1 = new Series("Teste1", 2005, true, 20,4);
 
         s1.viewTechnical();
+        m1.rating(8.0);
+        Recomendacao r1 = new Recomendacao();
 
+        r1.filter(m1);
     }
 }
