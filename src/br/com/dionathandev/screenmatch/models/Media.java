@@ -1,6 +1,6 @@
 package br.com.dionathandev.screenmatch.models;
 
-public class Media {
+public class Media implements Comparable<Media> {
 
     private String name;
     private int year;
@@ -80,4 +80,8 @@ public class Media {
     }
 
 
+    @Override
+        public int compareTo(Media otherMedia) {
+        return this.getName().compareTo(otherMedia.getName());
+    }
 }

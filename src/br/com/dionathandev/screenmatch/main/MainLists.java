@@ -5,6 +5,7 @@ import br.com.dionathandev.screenmatch.models.Movie;
 import br.com.dionathandev.screenmatch.models.Series;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MainLists {
     public static void main(String[] args) {
@@ -23,5 +24,15 @@ public class MainLists {
                 System.out.println(series.getEpisodes());
             }
         }
+
+        ArrayList<String> NameMedias = new ArrayList<>();
+
+        NameMedias.add(m1.getName());
+        NameMedias.add(s1.getName());
+
+        Collections.sort(NameMedias);
+
+        System.out.println(NameMedias);
+        
     }
 }
